@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["XamXamkhassida", "Chanteur"],
+    "directoryPath": "../",
+    "clusteredDbApps": [],
+    "serviceDiscoveryType": "eureka",
+    "dockerRepositoryName": "1234567891993",
+    "dockerPushCommand": "docker push",
+    "kubernetesNamespace": "jhipster",
+    "kubernetesServiceType": "LoadBalancer",
+    "kubernetesUseDynamicStorage": false,
+    "kubernetesStorageClassName": "",
+    "ingressDomain": "",
+    "monitoring": "no",
+    "istio": false,
+    "deploymentType": "kubernetes",
+    "jwtSecretKey": "N2VlM2MyNWIwZWU2MTc5Mjg4NThkYzU4NWQxYjRmNTM3NjgxYjNhZTk2YTExNmQ3ZTFjMDg0ZjkwZTgwZDgzYzdmYjdhZjY0ZWNkMzM4NDIyNzU1MTg3ZmVkYWM4YjRlNDUxYQ=="
+  }
+}

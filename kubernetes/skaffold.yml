@@ -1,0 +1,15 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+    - image: 1234567891993/xamxamkhassida
+      context: ../XamXamkhassida
+      jib: {}
+    - image: 1234567891993/chanteur
+      context: ../Chanteur
+      jib: {}
+  tagPolicy:
+    envTemplate:
+      template: "{{.IMAGE_NAME}}:latest"
+deploy:
+  kustomize: {}

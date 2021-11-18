@@ -1,0 +1,19 @@
+commonLabels:
+  app.kubernetes.io/genereted-by: JHipster
+
+namespace: jhipster
+
+resources:
+  - namespace.yml
+  # Individual apps
+  - xamxamkhassida-k8s/xamxamkhassida-deployment.yml
+  - xamxamkhassida-k8s/xamxamkhassida-service.yml
+  - xamxamkhassida-k8s/xamxamkhassida-mysql.yml
+  - chanteur-k8s/chanteur-deployment.yml
+  - chanteur-k8s/chanteur-service.yml
+  - chanteur-k8s/chanteur-mysql.yml
+  # service discovery eureka/consul
+  - registry-k8s/jhipster-registry.yml
+  - registry-k8s/application-configmap.yml
+
+patchesJson6902:

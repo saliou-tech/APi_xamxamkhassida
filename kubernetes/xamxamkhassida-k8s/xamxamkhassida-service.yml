@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: xamxamkhassida
+  namespace: jhipster
+  labels:
+    app: xamxamkhassida
+spec:
+  selector:
+    app: xamxamkhassida
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 8080

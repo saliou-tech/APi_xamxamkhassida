@@ -1,0 +1,61 @@
+application {
+  config {
+    baseName XamXamkhassida,
+    applicationType gateway,
+    packageName com.xamxamkhassida.api,
+    serviceDiscoveryType eureka,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    cacheProvider hazelcast,
+    buildTool gradle,
+    clientFramework react,
+    testFrameworks [protractor]
+  }
+  entities *
+}
+
+
+application {
+  config {
+    baseName Chanteur,
+    applicationType microservice,
+    packageName com.xamxamkhassida.api.chanteur,
+    serviceDiscoveryType eureka,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    buildTool gradle,
+    serverPort 8081
+  }
+  entities Chanteur, Chansons
+}
+deployment {
+  deploymentType kubernetes
+  appsFolders [XamXamkhassida,Chanteur]
+  serviceDiscoveryType eureka
+  dockerRepositoryName "1234567891993" // use your own docker repo username here
+  kubernetesNamespace jhipster
+  kubernetesServiceType LoadBalancer
+  monitoring no
+}
+
+entity Chanteur {
+	id Long
+    nom String required
+    preom String required
+   imageUrl String required
+}
+
+
+
+entity Chansons {
+	id  Long
+    titre String required
+    mediapath String
+}
+
+
+
+relationship OneToMany {
+    Chanteur{chanteur} to Chansons{chansons},
+ 
+}
